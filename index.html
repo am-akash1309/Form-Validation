@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <title>
+            Form Validation
+        </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" href="form.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+        <script src="./form.js"></script>
+    </head>
+    <body class="container pink lighten-5" ng-app="bot" ng-controller="catbot">
+        <form>
+            <div class="row">
+                <div class="col s8 offset-s2">
+                    <h3 class="formtitle">Registration Form</h3>
+                    <h6 class="forminfo">Fill out the form carefully for registration</h6>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s8 offset-s2">
+                    <p>Name<span class="right unfilled" ng-hide="name_check">Please Enter Your Name</span></p>
+                    <input type="text" ng-model="name">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s4  offset-s2">
+                    <p>Date of Birth<span class="right unfilled" ng-hide="dob_check">Please Enter Your Date of Birth</span></p>
+                    <input type="text" class="datepicker" ng-model="dob">
+                </div>
+                <div class="col s3 offset-s1">
+                    <p>Gender<span class="right unfilled" ng-hide="gender_check">Please Select Your Gender</span></p>
+                    <label><input class="with-gap" type="radio" value="male" name="gender" ng-model="gender"><span class="spantext">Male</span></label><br>
+                    <label><input class="with-gap" type="radio" value="female" name="gender" ng-model="gender"><span class="spantext">Female</span></label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s8 offset-s2">
+                    <p>Address<span class="right unfilled" ng-hide="address_check">Please Fill out all the fields of your Address</span></p>
+                    <input type="text" ng-model="street">
+                    <span class="helper-text">Street Address</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s4 offset-s2">
+                    <input type="text" ng-model="city">
+                    <span class="helper-text" ng-model="city">City</span>
+                </div>
+                <div class="col s4">
+                    <input type="text" ng-model="state">
+                    <span class="helper-text" ng-model="state">State</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s4 offset-s2">
+                    <input type="number" ng-model="pincode">
+                    <span class="helper-text" ng-model="pincode">Pincode</span>
+                </div>
+                <div class="col s4">
+                    <input type="text" ng-model="country">
+                    <span class="helper-text" ng-model="country">Country</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s8 offset-s2">
+                    <p>E-mail<span class="right unfilled" ng-hide="email_check">Please Enter Your E-mail address</span></p>
+                    <input type="email" ng-model="email">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s8 offset-s2">
+                    <p>Mobile Number<span class="right unfilled" ng-hide="number_check">Please Enter Your Mobile Number</span></p>
+                    <input type="number" ng-model="number">
+                </div>
+            </div>
+            <div class="row">
+                <div class="center">
+                    <label><input type="checkbox"><span class="spantext">By Registering you agree to our terms and conditions.</span></label>
+                </div>
+            </div>
+            <div class="center">
+                <a class="btn editbtn" ng-click="checkform()">Register</a>
+            </div>
+        </form>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    </body>
+</html>

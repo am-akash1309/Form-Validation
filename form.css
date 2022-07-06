@@ -1,0 +1,36 @@
+.formtitle{
+    font-weight: 500;
+    margin-bottom: 10px !important;
+}
+.forminfo{
+    margin-top: 0px !important;
+}
+input{
+    border-bottom: 1px solid black !important;
+    border-left: 1px solid black !important;
+    border-right: 1px solid black !important;
+    border-top: 1px solid black !important;
+    padding-inline-start: 10px !important;
+    border-radius: 8px !important;
+}
+.helper-text{
+    font-size: x-small;
+}
+.spantext{
+    color: black;
+    padding-left: 25px !important;
+}
+p{
+    font-weight: 650;
+}
+.editbtn{
+    background: rgb(14, 187, 14);
+    border-radius: 8px;
+}
+.editbtn:hover{
+    background: green;
+}
+.unfilled{
+    color: red;
+    font-size: small;
+}
